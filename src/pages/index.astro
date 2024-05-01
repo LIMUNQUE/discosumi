@@ -16,6 +16,8 @@ const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
   ignoreTitleTemplate: true,
 };
+
+import '../css/estilos.css';
 ---
 
 <Layout metadata={metadata}>
@@ -50,6 +52,60 @@ const metadata = {
     </Fragment>
   </Hero>
 
+<!-- Hero Widget ******************* -->
+  <section class="w-[95%] mx-auto overflow-visible text-white rounded-lg mt-20 slider" id="slider">
+        
+    <figure class="relative w-full h-full slider-childs" >
+
+        <img src="./src/assets/carrousel/img1.jpg" class="w-full h-full">
+
+
+        <div class="absolute inset-0 w-[90%] mx-auto h-max mt-auto space-y-4 py-8 hidden md:block">
+
+            <h2 class="text-3xl font-bold">Imagen 1:</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi corrupti vitae odit, dolorem amet laborum enim minus? Sint, quos reprehenderit.</p>
+
+        </div>
+
+    </figure>
+
+    <figure class="relative w-full h-full aspect-video slider-childs">
+
+        <img src="./src/assets/carrousel/img2.jpg" class="w-full h-full block object-cover">
+
+
+        <div class="absolute inset-0 w-[90%] mx-auto h-max mt-auto space-y-4 py-8 hidden md:block">
+
+            <h2 class="text-3xl font-bold">Imagen 2:</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi corrupti vitae odit, dolorem amet laborum enim minus? Sint, quos reprehenderit.</p>
+
+        </div>
+
+    </figure>
+    
+    <figure class="relative w-full h-full aspect-video slider-childs" data-active>
+
+        <img src="./src/assets/carrousel/img3.jpg" class="w-full h-full block object-cover">
+
+
+        <div class="absolute inset-0 w-[90%] mx-auto h-max mt-auto space-y-4 py-8 hidden md:block">
+
+            <h2 class="text-3xl font-bold">Imagen 3:</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi corrupti vitae odit, dolorem amet laborum enim minus? Sint, quos reprehenderit.</p>
+
+        </div>
+
+    </figure>
+
+    <button class="slider-prev bg-white rounded-full ml-4" data-button="prev">
+        <img src="./src/assets/carrousel/prev.svg" class="w-8 aspect-square md:w-12">
+    </button>
+
+    <button class="slider-next bg-white rounded-full mr-4" data-button="next">
+        <img src="./src/assets/carrousel/next.svg" class="w-8 aspect-square md:w-12">
+    </button>
+
+</section>
   <!-- Note Widget ******************* -->
 
   <Note />
@@ -105,8 +161,8 @@ const metadata = {
 
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="Somos una compañía"
+    title="Especializada en Equipos de Protección Personal"
     items={[
       {
         title: 'Built on top of Astro 4.0',
@@ -375,25 +431,8 @@ const metadata = {
   />
 
   <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
 </Layout>
+
+
+<script src="./src/js/slider.js" defer></script>
+
