@@ -1,7 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -10,102 +9,17 @@ import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
   ignoreTitleTemplate: true,
 };
-
+import Slider from '~/components/widgets/slider.astro';
 import '../css/estilos.css';
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn more', href: '#features' },
-    ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
-  >
-    <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 4.0</span> + Tailwind CSS
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 4.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-       Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages
-      & Blogs.
-    </Fragment>
-  </Hero>
-
-<!-- Hero Widget ******************* -->
-  <section class="w-[95%] mx-auto overflow-visible text-white rounded-lg mt-20 slider" id="slider">
-        
-    <figure class="relative w-full h-full slider-childs" >
-
-        <img src="./src/assets/carrousel/img1.jpg" class="w-full h-full">
-
-
-        <div class="absolute inset-0 w-[90%] mx-auto h-max mt-auto space-y-4 py-8 hidden md:block">
-
-            <h2 class="text-3xl font-bold">Imagen 1:</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi corrupti vitae odit, dolorem amet laborum enim minus? Sint, quos reprehenderit.</p>
-
-        </div>
-
-    </figure>
-
-    <figure class="relative w-full h-full aspect-video slider-childs">
-
-        <img src="./src/assets/carrousel/img2.jpg" class="w-full h-full block object-cover">
-
-
-        <div class="absolute inset-0 w-[90%] mx-auto h-max mt-auto space-y-4 py-8 hidden md:block">
-
-            <h2 class="text-3xl font-bold">Imagen 2:</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi corrupti vitae odit, dolorem amet laborum enim minus? Sint, quos reprehenderit.</p>
-
-        </div>
-
-    </figure>
-    
-    <figure class="relative w-full h-full aspect-video slider-childs" data-active>
-
-        <img src="./src/assets/carrousel/img3.jpg" class="w-full h-full block object-cover">
-
-
-        <div class="absolute inset-0 w-[90%] mx-auto h-max mt-auto space-y-4 py-8 hidden md:block">
-
-            <h2 class="text-3xl font-bold">Imagen 3:</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi corrupti vitae odit, dolorem amet laborum enim minus? Sint, quos reprehenderit.</p>
-
-        </div>
-
-    </figure>
-
-    <button class="slider-prev bg-white rounded-full ml-4" data-button="prev">
-        <img src="./src/assets/carrousel/prev.svg" class="w-8 aspect-square md:w-12">
-    </button>
-
-    <button class="slider-next bg-white rounded-full mr-4" data-button="next">
-        <img src="./src/assets/carrousel/next.svg" class="w-8 aspect-square md:w-12">
-    </button>
-
-</section>
+  <Slider />
   <!-- Note Widget ******************* -->
 
   <Note />
@@ -187,7 +101,7 @@ import '../css/estilos.css';
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-       Gain a competitive advantage by incorporating industry leading practices
+      Gain a competitive advantage by incorporating industry leading practices
     </Fragment>
 
     <Fragment slot="bg">
@@ -433,6 +347,4 @@ import '../css/estilos.css';
   <!-- CallToAction Widget *********** -->
 </Layout>
 
-
 <script src="./src/js/slider.js" defer></script>
-
