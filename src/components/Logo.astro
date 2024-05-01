@@ -7,3 +7,19 @@ import { SITE } from 'astrowind:config';
 >
   🚀 {SITE?.name}
 </span>
+
+<style>
+  @media (max-width: 900px) {
+    .test {
+      display: none;
+    }
+    @media (max-width: 767px) {
+      .test {
+        display: block;
+      }
+    }
+  }
+  .text {
+    display: block;
+  }
+</style>
