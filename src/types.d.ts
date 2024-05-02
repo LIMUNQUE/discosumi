@@ -18,6 +18,7 @@ export interface Post {
 
   /**  */
   title: string;
+
   /** Optional summary of post content. */
   excerpt?: string;
   /**  */
@@ -47,10 +48,12 @@ export interface Post {
 export interface Taxonomy {
   slug: string;
   title: string;
+
 }
 
 export interface MetaData {
   title?: string;
+
   ignoreTitleTemplate?: boolean;
 
   canonical?: string;
@@ -107,7 +110,9 @@ export interface Widget {
 
 export interface Headline {
   title?: string;
+  title2?: string;
   subtitle?: string;
+  subtitle2?: string;
   tagline?: string;
   classes?: Record<string, string>;
 }
@@ -266,6 +271,7 @@ export interface Faqs extends Omit<Headline,"classes">, Widget {
 export interface Steps extends Omit<Headline,"classes">, Widget {
   items: Array<{
     title: string;
+    title2: string;
     description?: string;
     icon?: string;
     classes?: Record<string, string>;
